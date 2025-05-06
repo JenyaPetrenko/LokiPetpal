@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -7,11 +7,11 @@ export default function Navbar() {
       <div id="navbar">
         <Image src="/img/logo.png" alt="logo" width={40} height={40} />
         <div id="navbar-links">
-          <a href="/">Home</a>
-          <a href="/about">About Us</a>
-          <a href="/products">Products</a>
-          <a href="/reviews">Reviews</a>
-          <a href="/kontakt">Contact</a>
+          <Link href="/">Home</Link>
+          <Link href="/about">About Us</Link>
+          <Link href="/products">Products</Link>
+          <Link href="/reviews">Reviews</Link>
+          <Link href="/kontakt">Contact</Link>
         </div>
       </div>
     </nav>

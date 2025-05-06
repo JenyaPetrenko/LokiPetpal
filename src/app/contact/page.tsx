@@ -1,51 +1,10 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
+import Navbar from "@/components/Navbar/Navbar";
 import Image from "next/image";
 
 export default function Kontakt() {
   return (
     <div className="kontakt">
-      <header>
-        <nav>
-          <div id="navbar">
-            <Image src="/img/logo.png" alt="logo" width={40} height={40} />
-            <svg
-              id="hamburger"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-align-justify"
-            >
-              <line x1="21" y1="10" x2="3" y2="10"></line>
-              <line x1="21" y1="6" x2="3" y2="6"></line>
-              <line x1="21" y1="14" x2="3" y2="14"></line>
-              <line x1="21" y1="18" x2="3" y2="18"></line>
-            </svg>
-          </div>
-          <div id="navbar-links" className="display">
-            <a id="link_home" href="/">
-              Home
-            </a>
-            <a id="link_about" href="/about">
-              About Us
-            </a>
-            <a id="link_product" href="/products">
-              Products
-            </a>
-            <a id="link_review" href="/reviews">
-              Reviews
-            </a>
-            <a id="link_kontakt" href="/kontakt">
-              Contact
-            </a>
-          </div>
-        </nav>
-      </header>
+      <Navbar />
 
       <div className="wrapper">
         <div className="images">
