@@ -17,7 +17,7 @@ export default function Home() {
             <Link href="/about">About Us</Link>
             <Link href="/products">Products</Link>
             <Link href="/reviews">Reviews</Link>
-            <Link href="/kontakt">Contact</Link>
+            <Link href="/contacts">Contact</Link>
           </div>
         </nav>
       </header>
