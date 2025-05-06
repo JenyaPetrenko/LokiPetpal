@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import "../styles/legacy.css";
-import Navbar from "@/components/Navbar/Navbar";
-import Footer from "@/components/Footer/Footer";
+// import Navbar from "@/components/Navbar/Navbar";
+// import Footer from "@/components/Footer/Footer";
 
 export const metadata = {
   title: "LokiPetpal",
@@ -17,9 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

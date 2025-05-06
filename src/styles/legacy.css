@@ -14,8 +14,20 @@ nav #navbar {
   padding: 0.5rem;
 }
 
+nav #navbar > span {
+  height: 100%; /* Робимо контейнер зображення повної висоти */
+  display: flex;
+  align-items: center;
+}
+
 nav #navbar img {
-  max-height: 100%;
+  object-fit: contain; /* Пропорційне масштабування зображення */
+  height: 35px; /* Висота зображення */
+  width: 35px; /* Масштабуємо зображення в межах контейнера */
+  width: auto; /* Зберігаємо пропорції */
+}
+nav #navbar img:hover {
+  cursor: pointer;
 }
 
 #navbar-links {
@@ -165,13 +177,18 @@ nav #navbar img {
 .index {
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background: url("/img/topImage-1.jpg") no-repeat center;
-  background-size: cover;
+  background: url("/img/topImage-1.jpg") no-repeat center center; /* Центруємо фон */
+  background-size: cover; /* Масштабування для покриття всього блоку */
+  width: 100%; /* Займає всю ширину */
+  height: 100vh; /* Займає всю висоту вікна */
 }
 
 .index .wrapper {
-  height: 100vh;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центруємо контент по вертикалі */
+  align-items: center; /* Центруємо контент по горизонталі */
+  height: 100%;
   margin: 0;
 }
 

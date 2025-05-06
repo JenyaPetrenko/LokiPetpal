@@ -1,37 +1,39 @@
-/* eslint-disable @next/next/no-html-link-for-pages */
-import Image from "next/image";
+"use client";
 
+import Image from "next/image";
+import Link from "next/link";
+import "../styles/legacy.css";
+import { Footer } from "@/components/Footer";
 export default function Home() {
   return (
     <div className="index">
       <header>
         <nav>
           <div id="navbar">
-            <Image src="/img/logo.png" alt="logo" width={50} height={50} />
+            <Image src="/img/logo.png" alt="logo" width={100} height={100} />
           </div>
           <div id="navbar-links">
-            <a href="/">Home</a>
-            <a href="/about">About Us</a>
-            <a href="/products">Products</a>
-            <a href="/reviews">Reviews</a>
-            <a href="/kontakt">Contact</a>
+            <Link href="/">Home</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/products">Products</Link>
+            <Link href="/reviews">Reviews</Link>
+            <Link href="/kontakt">Contact</Link>
           </div>
         </nav>
       </header>
-      <main>
-        <h2>For Animals. For Smiles.</h2>
-        <p>
-          Petpal connects pet owners seeking temporary homes with those eager to
-          embrace pet companionship.
-        </p>
-        <button
-          type="button"
-          onClick={() => (window.location.href = "/products")}
-          className="CTA"
-        >
-          To the Service
-        </button>
-      </main>
+      <div className="wrapper">
+        <main>
+          <h2>For Animals. For Smiles.</h2>
+          <p>
+            Petpal connects pet owners seeking temporary homes with those eager
+            to embrace pet companionship.
+          </p>
+          <Link href="/products">
+            <button className="CTA">To the Service</button>
+          </Link>
+        </main>
+      </div>
+      <Footer />
     </div>
   );
 }
