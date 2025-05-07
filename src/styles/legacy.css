@@ -684,7 +684,7 @@ nav #navbar img:hover {
   padding-bottom: 0;
 }
 
-#referenserBODY #reviewCards .reviewCard .container .container svg {
+.container svg {
   color: yellow;
 }
 
