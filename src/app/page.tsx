@@ -47,30 +47,15 @@ export default function Home() {
         </main>
       </div>
       {/* Логіка для модальних вікон */}
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-        <button
-          onClick={() => setIsLoginOpen(true)}
-          className="bg-blue-500 text-white px-4 py-2 rounded-md"
-        >
-          Log In
-        </button>
-        <button
-          onClick={() => setIsRegisterOpen(true)}
-          className="bg-green-500 text-white px-4 py-2 rounded-md mt-4"
-        >
-          Register
-        </button>
+      {/* Модальне вікно для логіну */}
+      <Modal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}>
+        <LoginForm onSuccess={() => setIsLoginOpen(false)} />
+      </Modal>
 
-        {/* Модальне вікно для логіну */}
-        <Modal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}>
-          <LoginForm onSuccess={() => setIsLoginOpen(false)} />
-        </Modal>
-
-        {/* Модальне вікно для реєстрації */}
-        <Modal isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)}>
-          <RegisterForm onSuccess={() => setIsRegisterOpen(false)} />
-        </Modal>
-      </div>
+      {/* Модальне вікно для реєстрації */}
+      <Modal isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)}>
+        <RegisterForm onSuccess={() => setIsRegisterOpen(false)} />
+      </Modal>
       <Footer />
     </div>
   );

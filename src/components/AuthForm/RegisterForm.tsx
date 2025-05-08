@@ -27,7 +27,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSuccess }) => {
       </p>
       <button
         onClick={() => setRole("owner")}
-        className="bg-blue-500 text-white py-2 rounded-md"
+        className="bg-[rgb(66,106,90)] text-white py-2 rounded-md"
       >
         Register as Pet Owner
       </button>
