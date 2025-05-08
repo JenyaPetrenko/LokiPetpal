@@ -38,14 +38,16 @@ export default function Home() {
             Petpal connects pet owners seeking temporary homes with those eager
             to embrace pet companionship.
           </p>
-          <Link href="/products">
-            <button className="CTA">To the Service</button>
-          </Link>
+          <button
+            className="CTA"
+            onClick={() => setIsLoginOpen(true)} // Відкриваємо модальне вікно
+          >
+            To the Service
+          </button>
         </main>
       </div>
       {/* Логіка для модальних вікон */}
       <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-        <h1 className="text-3xl font-bold mb-6">Welcome to Pet Service</h1>
         <button
           onClick={() => setIsLoginOpen(true)}
           className="bg-blue-500 text-white px-4 py-2 rounded-md"
@@ -59,10 +61,12 @@ export default function Home() {
           Register
         </button>
 
+        {/* Модальне вікно для логіну */}
         <Modal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}>
           <LoginForm onSuccess={() => setIsLoginOpen(false)} />
         </Modal>
 
+        {/* Модальне вікно для реєстрації */}
         <Modal isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)}>
           <RegisterForm onSuccess={() => setIsRegisterOpen(false)} />
         </Modal>
