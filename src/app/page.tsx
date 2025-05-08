@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react"; // Додано useState
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -8,12 +8,9 @@ import "../styles/legacy.css";
 import { Footer } from "@/components/Footer";
 import Modal from "@/components/Modal/Modal";
 import LoginForm from "@/components/AuthForm/LoginForm";
-import RegisterForm from "@/components/AuthForm/RegisterForm";
 
 export default function Home() {
-  // Додано стани для модальних вікон
   const [isLoginOpen, setIsLoginOpen] = useState(false);
-  const [isRegisterOpen, setIsRegisterOpen] = useState(false);
 
   return (
     <div className="index">
@@ -46,15 +43,8 @@ export default function Home() {
           </button>
         </main>
       </div>
-      {/* Логіка для модальних вікон */}
-      {/* Модальне вікно для логіну */}
       <Modal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)}>
         <LoginForm onSuccess={() => setIsLoginOpen(false)} />
-      </Modal>
-
-      {/* Модальне вікно для реєстрації */}
-      <Modal isOpen={isRegisterOpen} onClose={() => setIsRegisterOpen(false)}>
-        <RegisterForm onSuccess={() => setIsRegisterOpen(false)} />
       </Modal>
       <Footer />
     </div>
